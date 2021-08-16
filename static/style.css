@@ -1,6 +1,11 @@
 @import 'https://fonts.googleapis.com/css?family=Inconsolata|Merriweather';
+* {
+  padding: 0;
+  margin: 0
+}
 html {
-  background-color: #3b4252;
+  background-color: #111;
+  overflow: hidden
 }
 html h1,
 html h2,

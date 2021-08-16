@@ -1,126 +1,114 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta
-      name="keywords"
-      content="ibotplus,ibotstat,占钊,雷震,彭文达,eko.zhan,ekoz,ekozhan,Yogurt,Yogurt-lei,Amos,AmosWang,王道远"
-    />
-    <meta name="description" content="小i机器人智能知识库解决方案开发部团队" />
-    <meta name="renderer" content="webkit" />
-    <meta name="robots" content="index, follow" />
-    <meta name="googlebot" content="index, follow" />
-    <!--meta name="viewport" content="width=device-width, maximum-scale=0.5" /-->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-touch-fullscreen" content="yes" />
-    <meta
-      id="viewport"
-      name="viewport"
-      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0"
-    />
-    <!-- thanks for http://jsrun.pro/WqpKp/edit -->
-    <title>ibotplus</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      class="js-site-favicon"
-      href="https://avatars0.githubusercontent.com/u/14013534?s=70&v=4"
-    />
-    <link rel="stylesheet" type="text/css" href="./static/style.css" />
-  </head>
-  <body style="height: 96vh">
-    <a href="https://github.com/ibotplus">
-      <img
-        class="gh-forkme"
-        src="http://ekozhan.com/assets/images/forkme_right_darkblue.png"
-        alt="Fork me on GitHub"
-      />
-    </a>
-    <div class="container">
-      <div class="shell-container">
-        <div class="header-shell">
-          <img
-            class="cli-img"
-            src="./static/Command_prompt_icon_(windows).png"
-            alt="windows_cli.png"
-          />
-          <p class="shell-title">C:\\Windows\system32\cmd.exe</p>
-          <span class="minimize"></span>
-          <span class="maximize"></span>
-          <span class="close"></span>
-        </div>
-        <div class="body-shell">
-          <p class="microsoft-label">Microsoft Windows [version 10.0.10586]</p>
-          <p class="microsoft-label">
-            (c) 2021 Microsoft Corporation. All rights reserved.
-          </p>
-        </div>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="keywords"
+    content="ibotplus,ibotstat,占钊,雷震,彭文达,eko.zhan,ekoz,ekozhan,Yogurt,Yogurt-lei,Amos,AmosWang,王道远" />
+  <meta name="description" content="小i机器人智能知识库解决方案开发部团队" />
+  <meta name="renderer" content="webkit" />
+  <meta name="robots" content="index, follow" />
+  <meta name="googlebot" content="index, follow" />
+  <!--meta name="viewport" content="width=device-width, maximum-scale=0.5" /-->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-touch-fullscreen" content="yes" />
+  <meta id="viewport" name="viewport"
+    content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+  <!-- thanks for http://jsrun.pro/WqpKp/edit -->
+  <title>ibotplus</title>
+  <link rel="icon" type="image/x-icon" class="js-site-favicon"
+    href="https://avatars0.githubusercontent.com/u/14013534?s=70&v=4" />
+  <link rel="stylesheet" type="text/css" href="./static/style.css" />
+</head>
+
+<body style="height: 96vh">
+  <canvas id="canvas" style="background:#111"></canvas>
+  <a href="https://github.com/ibotplus">
+    <img class="gh-forkme" src="http://ekozhan.com/assets/images/forkme_right_darkblue.png" alt="Fork me on GitHub" />
+  </a>
+  <div class="container">
+    <div class="shell-container">
+      <div class="header-shell">
+        <img class="cli-img" src="./static/Command_prompt_icon_(windows).png" alt="windows_cli.png" />
+        <p class="shell-title">C:\\Windows\system32\cmd.exe</p>
+        <span class="minimize"></span>
+        <span class="maximize"></span>
+        <span class="close"></span>
+      </div>
+      <div class="body-shell">
+        <p class="microsoft-label">Microsoft Windows [version 10.0.10586]</p>
+        <p class="microsoft-label">
+          (c) 2021 Microsoft Corporation. All rights reserved.
+        </p>
       </div>
     </div>
+  </div>
 
-    <script src="https://cdn.jsdelivr.net/gh/saucxs/watermark-dom/watermark.js"></script>
-    <script src="https://cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
-    <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/gh/saucxs/watermark-dom/watermark.js"></script> -->
+  <script src="static/watermark.js"></script>
+  <script src="https://cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
+  <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+  <script src="static/CodeSnowfall.js"></script>
 
-    <script type="text/javascript">
-      let string_arr = [
-        '`C:\\Users\\ibotplus>` If the hero never comes to you ',
-        "`C:\\Users\\ibotplus>` If you need someone you're feeling blue",
-        '`C:\\Users\\ibotplus>` If you wait for love and you’re alone',
-        "`C:\\Users\\ibotplus>` If you call your friends and nobody's home",
-        "`C:\\Users\\ibotplus>` You can run away but you can't hide",
-        '`C:\\Users\\ibotplus>` Through a storm and through a lonely night',
-        "`C:\\Users\\ibotplus>` Then I show you there's a destiny",
-        "`C:\\Users\\ibotplus>` The best things in life, they're free",
-        '`C:\\Users\\ibotplus>` But if you wanna cry, cry on my shoulder',
-        '`C:\\Users\\ibotplus>` If you need someone who cares for you',
-        "`C:\\Users\\ibotplus>` If you're feeling sad your heart gets colder",
-        '`C:\\Users\\ibotplus>` Yes I show you what real love can do<span class="ping"></span>'
-      ]
-      typing(string_arr, 0)
+  <script type="text/javascript">
+    CodeSnowfall("canvas")
 
-      watermark.load({
-        watermark_txt: returnCitySN['cip'] + ' ' + returnCitySN['cname'],
-        watermark_width: 200
+    let string_arr = [
+      '`C:\\Users\\ibotplus>` If the hero never comes to you ',
+      "`C:\\Users\\ibotplus>` If you need someone you're feeling blue",
+      '`C:\\Users\\ibotplus>` If you wait for love and you’re alone',
+      "`C:\\Users\\ibotplus>` If you call your friends and nobody's home",
+      "`C:\\Users\\ibotplus>` You can run away but you can't hide",
+      '`C:\\Users\\ibotplus>` Through a storm and through a lonely night',
+      "`C:\\Users\\ibotplus>` Then I show you there's a destiny",
+      "`C:\\Users\\ibotplus>` The best things in life, they're free",
+      '`C:\\Users\\ibotplus>` But if you wanna cry, cry on my shoulder',
+      '`C:\\Users\\ibotplus>` If you need someone who cares for you',
+      "`C:\\Users\\ibotplus>` If you're feeling sad your heart gets colder",
+      '`C:\\Users\\ibotplus>` Yes I show you what real love can do<span class="ping"></span>'
+    ]
+    typing(string_arr, 0)
+
+    watermark.load({
+      watermark_txt: returnCitySN['cip'] + ' ' + returnCitySN['cname'],
+      watermark_width: 200
+    })
+    function typing(string_arr, index) {
+      if (index >= string_arr.length) return false
+      let elem = document.createElement('p')
+      elem.classList.add('input')
+      elem.classList.add('element-' + index)
+      document.querySelector('.body-shell').appendChild(elem)
+      new Typed('.element-' + index, {
+        strings: [string_arr[index]],
+        typeSpeed: 90,
+        backSpeed: 60,
+        smartBackspace: false,
+        backDelay: 700,
+        loop: false,
+        showCursor: true,
+        cursorChar: '_',
+        onComplete: self => {
+          typing(string_arr, ++index)
+          // scroll to bottom
+          let bodyShellEl = document.querySelector('.body-shell')
+          bodyShellEl.scrollTop = bodyShellEl.scrollHeight
+        }
       })
-      function typing(string_arr, index) {
-        if (index >= string_arr.length) return false
-        let elem = document.createElement('p')
-        elem.classList.add('input')
-        elem.classList.add('element-' + index)
-        document.querySelector('.body-shell').appendChild(elem)
-        new Typed('.element-' + index, {
-          strings: [string_arr[index]],
-          typeSpeed: 90,
-          backSpeed: 60,
-          smartBackspace: false,
-          backDelay: 700,
-          loop: false,
-          showCursor: true,
-          cursorChar: '_',
-          onComplete: self => {
-            typing(string_arr, ++index)
-            // scroll to bottom
-            let bodyShellEl = document.querySelector('.body-shell')
-            bodyShellEl.scrollTop = bodyShellEl.scrollHeight
-          }
-        })
-      }
-    </script>
+    }
+  </script>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-105171697-3"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || []
-      function gtag() {
-        dataLayer.push(arguments)
-      }
-      gtag('js', new Date())
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-105171697-3"></script>
+  <script>
+    window.dataLayer = window.dataLayer || []
+    function gtag() {
+      dataLayer.push(arguments)
+    }
+    gtag('js', new Date())
 
-      gtag('config', 'UA-105171697-3')
-    </script>
-  </body>
+    gtag('config', 'UA-105171697-3')
+  </script>
+</body>
+
 </html>
