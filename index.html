@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="keywords"
     content="ibotplus,ibotstat,占钊,雷震,彭文达,eko.zhan,ekoz,ekozhan,Yogurt,Yogurt-lei,Amos,AmosWang,王道远" />
-  <meta name="description" content="小i机器人智能知识库解决方案开发部团队" />
+  <meta name="description" content="小i机器人智能知识库研发中心" />
   <meta name="renderer" content="webkit" />
   <meta name="robots" content="index, follow" />
   <meta name="googlebot" content="index, follow" />
@@ -38,8 +38,9 @@
       <div class="body-shell">
         <p class="microsoft-label">Microsoft Windows [version 10.0.10586]</p>
         <p class="microsoft-label">
-          (c) 2021 Microsoft Corporation. All rights reserved.
+          (c) <span id="copyRightYear"></span> Microsoft Corporation. All rights reserved.
         </p>
+        <div class="shell-background"></div>
       </div>
     </div>
   </div>
@@ -51,7 +52,9 @@
   <script src="static/CodeSnowfall.js"></script>
 
   <script type="text/javascript">
-    CodeSnowfall("canvas")
+    CodeSnowfall("canvas");
+
+    document.querySelector("#copyRightYear").innerText = new Date().getFullYear() || 2022;
 
     let string_arr = [
       '`C:\\Users\\ibotplus>` If the hero never comes to you ',
